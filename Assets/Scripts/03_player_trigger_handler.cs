@@ -13,7 +13,6 @@ public class player_trigger_handler : MonoBehaviour
     private Renderer playerRenderer;
     private Color colorOriginal;
 
-    // Variable para almacenar la dirección capturada en Update
     private Vector3 direccionInput;
 
     void Start()
@@ -28,7 +27,6 @@ public class player_trigger_handler : MonoBehaviour
 
     void Update()
     {
-        // El input se captura en Update por convenio y precisión de frames
         float movimientoHorizontal = Input.GetAxis("Horizontal");
         float movimientoVertical = Input.GetAxis("Vertical");
 
@@ -37,7 +35,6 @@ public class player_trigger_handler : MonoBehaviour
 
     void FixedUpdate()
     {
-        // La física y el movimiento del Rigidbody se ejecutan en FixedUpdate
         if (direccionInput.magnitude > 0.01f)
         {
             Vector3 nuevaPosicion = rb.position + direccionInput.normalized * speed * Time.fixedDeltaTime;
