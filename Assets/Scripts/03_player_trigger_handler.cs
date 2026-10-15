@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerTriggerHandler : MonoBehaviour
+public class player_trigger_handler : MonoBehaviour
 {
     public float speed = 5f;
     private Rigidbody rb;
